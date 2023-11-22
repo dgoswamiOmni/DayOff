@@ -1,0 +1,12 @@
+boto3==1.15.2
+bson==0.5.10
+fastjsonschema==2.18.1
+jsonschema==4.19.1
+jsonschema-specifications==2023.7.1
+pymongo==4.6.0
+jwt
+uuid==1.30
+cassandra-driver==3.28.0
+passlib==1.7.4
+pymongo==4.6.0
+bson==0.5.10
