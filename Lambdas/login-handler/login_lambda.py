@@ -1,6 +1,6 @@
 import json
-from cassandra_utils import session
-from auth_utils import generate_jwt_token, log_login
+from Utils.cassandra_utils import session
+from Utils.auth_utils import generate_jwt_token, log_login
 from passlib.hash import pbkdf2_sha256
 
 
