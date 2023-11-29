@@ -4,7 +4,7 @@ import asyncio
 from bson.json_util import dumps
 
 # Define your MongoDB connection string
-MONGODB_URI = "mongodb+srv://devarshigoswami97:AoKUNhswGnboFmWt@dayoff.c1bq6uj.mongodb.net/?retryWrites=true&w=majority"
+MONGODB_URI = ""
 
 # Once we connect to the database once, we'll store that connection and reuse it so that we don't have to connect to the database on every request.
 cached_db = None
