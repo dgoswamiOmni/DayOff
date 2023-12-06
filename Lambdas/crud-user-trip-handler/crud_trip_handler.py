@@ -80,3 +80,21 @@ def delete_trip(event, context):
         return {'statusCode': 200, 'body': json.dumps({'message': 'Trip deleted'})}
     except Exception as e:
         return {'statusCode': 500, 'body': json.dumps({'message': 'Internal Server Error'})}
+
+
+def lambda_handler(event, context):
+    try:
+        operation = event.get('operation')
+
+        if operation == 'create_trip':
+            return create_trip(event, context)
+        elif operation == 'get_trip':
+            return get_trip(event, context)
+        elif operation == 'update_trip':
+            return update_trip(event, context)
+        elif operation == 'delete_trip':
+            return delete_trip(event, context)
+        else:
+            return {'statusCode': 400, 'body': json.dumps({'error': 'Invalid operation specified'})}
+    except Exception as e:
+        return {'statusCode': 500, 'body': json.dumps({'error': str(e)})}

@@ -20,10 +20,10 @@ def create_trip(event):
             body = json.loads(event['body'])
             trip_details = {
                 'creator_id': decoded_token['sub'],
-                'date': body['date'],
-                'time': body['time'],
-                'location': body['location'],
-                'description': body['description'],
+                'date': body.get('date'),
+                'time': body.get('time'),
+                'location': body.get('location'),
+                'description': body.get('description'),
                 'participants': [decoded_token['sub']]
             }
             result = trips_collection.insert_one(trip_details)
